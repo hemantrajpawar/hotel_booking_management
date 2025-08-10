@@ -2,7 +2,8 @@
 
 A comprehensive *MERN Stack* application designed to streamline the hotel booking process. This platform provides users with a seamless interface for searching, filtering, and booking rooms in real-time, while offering administrators a powerful dashboard for inventory management. It is built with a focus on performance, security, and offline capabilities.
 
-![StayEase Homepage](https://github.com/user-attachments/assets/b0343c6f-fa23-4dfd-9ada-672dad730adc)
+<img width="1920" height="895" alt="Screenshot (1111)" src="https://github.com/user-attachments/assets/23e3d745-5626-44db-a023-ce4b67ee1964" />
+
 
 ---
 
@@ -51,7 +52,7 @@ Follow these instructions to set up and run the project locally.
 
 ### 1. Clone Repository
 bash
-git clone [https://github.com/your-username/StayEase-Hotel-Booking.git](https://github.com/your-username/StayEase-Hotel-Booking.git)
+git clone [https://github.com/hemantrajpawar/hotel_booking_management.git](https://github.com/your-username/StayEase-Hotel-Booking.git)
 cd StayEase-Hotel-Booking
 
 
@@ -146,19 +147,25 @@ A simple diagram showing the flow: The React Frontend communicates with the Node
 
 <table>
   <tr>
-    <td colspan="2"><strong>Homepage & Features</strong></td>
+    <td colspan="2"><strong>Homepage & PWA page (Offline Page )</strong></td>
   </tr>
   <tr>
-    <td><img src="[https://github.com/user-attachments/assets/b0343c6f-fa23-4dfd-9ada-672dad730adc](https://github.com/user-attachments/assets/b0343c6f-fa23-4dfd-9ada-672dad730adc)" alt="Homepage Hero Section" /></td>
-    <td><img src="[https://github.com/user-attachments/assets/6f4f5b98-1a23-4d96-b158-e6653a9ac69a](https://github.com/user-attachments/assets/6f4f5b98-1a23-4d96-b158-e6653a9ac69a)" alt="Homepage Features Section" /></td>
+    <td><img width="1920" height="895" alt="Screenshot (1111)" src="https://github.com/user-attachments/assets/d4ac80af-ef2f-4dcb-a465-81e6e7250156" />
+</td>
+    <td><img width="1920" height="1080" alt="Screenshot (1117)" src="https://github.com/user-attachments/assets/148e0b14-1ede-46c0-a435-1514aece9849" />
+</td>
   </tr>
   <tr>
     <td><strong>Rooms List & Filtering</strong></td>
     <td><strong>Admin Panel</strong></td>
   </tr>
   <tr>
-    <td><img src="[https://github.com/user-attachments/assets/f3e201b1-83d9-477f-a24b-b583a80bec92](https://github.com/user-attachments/assets/f3e201b1-83d9-477f-a24b-b583a80bec92)" alt="Rooms List and Filtering" /></td>
-    <td><img src="[https://github.com/user-attachments/assets/3c847cc3-2ffb-4082-97c7-623651b15b59](https://github.com/user-attachments/assets/3c847cc3-2ffb-4082-97c7-623651b15b59)" alt="Admin Panel to Manage Rooms" /></td>
+    <td><img width="1920" height="885" alt="Screenshot (1113)" src="https://github.com/user-attachments/assets/44b45fea-7dba-4806-a11d-384d6071567a" />
+<img width="705" height="766" alt="Screenshot (1121)" src="https://github.com/user-attachments/assets/a4ce7c04-ccdc-49ab-b9e5-db88d0badf2d" />
+
+</td>
+    <td><img width="1920" height="887" alt="Screenshot (1114)" src="https://github.com/user-attachments/assets/2c3c86ed-579e-448e-a4b1-31728c390a66" />
+</td>
   </tr>
 </table>
 
