@@ -1,0 +1,181 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and HTML to prevent horizontal scrolling */
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Main background container */
+.image-container-home {
+  position: relative;
+  height: 100vh; /* Full height of the viewport */
+  background-image: url('/blue-armchair-against-blue-wall-living-room-interior-elegant-interior-design-with-copy-space-ai-generative.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 0) 100%);
+
+  /* --- RESPONSIVE CHANGES --- */
+  /* Use Flexbox to control the alignment of child elements */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: flex-start; /* Align content to the left by default */
+  padding: 0 5%; /* Add some padding on the sides */
+}
+
+/* "LAVIOUS" title text */
+.lavious {
+  color: rgba(240, 248, 255, 0.781);
+  font-size: 150px;
+  font-family: "Forum", serif;
+  font-stretch: normal;
+  /* Removed fixed margins */
+}
+
+/* "Where Luxury Meets Comfort" subtitle */
+.quote {
+  color: rgba(240, 248, 255, 0.566);
+  font-size: 28px;
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+  /* Removed fixed margins */
+  margin-top: -10px; /* Adjust spacing */
+  margin-bottom: 30px;
+}
+
+/* Booking Form Container */
+.home-booking-form {
+  width: auto; /* Allow width to be flexible */
+  max-width: 800px; /* Prevent it from getting too wide on large screens */
+  background-color: rgba(255, 255, 255, 0.136);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Removed fixed margins */
+}
+
+/* Container for the input fields */
+.home-booking-fields {
+  display: flex;
+  /* --- KEY RESPONSIVE CHANGE --- */
+  /* This allows the fields to wrap onto the next line on smaller screens */
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Each field block (label + input) */
+.home-booking-fields > div {
+  display: flex;
+  flex-direction: column;
+  border-left: solid #636a8c57;
+  padding-left: 15px;
+  /* Allow fields to grow but not shrink below their content size */
+  flex: 1 1 150px;
+}
+
+/* Label styling */
+.home-booking-form label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #fdfdfd;
+}
+
+/* Input styling */
+.home-booking-form input {
+  border: none;
+  outline: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: aliceblue;
+  padding: 4px 6px;
+  background-color: transparent;
+  border-bottom: 1px solid #d8d0d0;
+  font-size: 14px;
+  width: 100%; /* Make inputs fill their container */
+}
+
+/* Submit Button */
+.home-booking-form button {
+  background-color: #3b455cb1;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  align-self: center;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make button full-width inside the form */
+  max-width: 300px; /* But not too wide */
+}
+
+.home-booking-form button:hover {
+  background-color: #52689d87;
+}
+
+
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+
+/* For Tablets and smaller devices */
+@media (max-width: 768px) {
+  .image-container-home {
+    align-items: center; /* Center all content */
+    text-align: center; /* Center text inside elements */
+  }
+
+  .lavious {
+    font-size: 100px; /* Reduce font size */
+  }
+
+  .quote {
+    font-size: 22px; /* Reduce font size */
+    margin-left: 0; /* Remove any remaining margin */
+  }
+
+  .home-booking-form {
+    width: 90%; /* Make form wider on tablets */
+  }
+
+  .home-booking-fields {
+    flex-direction: column; /* Stack fields vertically */
+    align-items: stretch;
+  }
+
+  .home-booking-fields > div {
+    border-left: none; /* Remove side border when stacked */
+    padding-left: 0;
+  }
+}
+
+/* For Mobile phones */
+@media (max-width: 480px) {
+  .lavious {
+    font-size: 60px; /* Further reduce font size */
+  }
+
+  .quote {
+    font-size: 18px; /* Further reduce font size */
+  }
+
+  .home-booking-form {
+    padding: 15px;
+  }
+
+  .home-booking-form button {
+    padding: 10px 20px;
+  }
+}

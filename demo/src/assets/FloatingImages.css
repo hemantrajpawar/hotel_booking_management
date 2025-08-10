@@ -1,0 +1,136 @@
+
+/* Floating Wrapper */
+.floating-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 20px; /* Add some padding for smaller screens */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center the content */
+    gap: 30px;
+    flex-wrap: wrap; /* This is the key for responsiveness */
+  }
+  
+  /* Floating images container */
+  .floating-container {
+    position: relative;
+    width: 450px; /* Give it a max-width for consistency */
+    max-width: 100%;
+    height: 450px;
+  }
+  
+  /* Floating Image Box */
+  .floating-box {
+    position: absolute;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    animation: floating 4s infinite ease-in-out alternate;
+  }
+  
+  /* Floating Animation */
+  @keyframes floating {
+    0% {
+      transform: translateY(-5px) rotate(1deg);
+    }
+    100% {
+      transform: translateY(5px) rotate(-1deg);
+    }
+  }
+  
+  /* Image Styling */
+  .floating-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, filter 0.5s ease;
+  }
+  
+  /* Hover Effect */
+  .floating-box:hover {
+    transform: scale(1.1);
+    z-index: 3;
+  }
+  
+  .floating-container:hover .floating-box:not(:hover) {
+    transform: scale(0.85);
+    filter: blur(2px);
+  }
+  
+  /* Description Box */
+  .float-description-box {
+    flex: 1; /* Allow it to take up remaining space */
+    min-width: 300px; /* Prevent it from getting too squished */
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    margin: 0; /* Reset margins */
+  }
+  
+  .float-description-box h2 {
+    font-size: 28px;
+    color: #e91e63;
+    margin-bottom: 10px;
+  }
+  
+  .float-description-box p {
+    font-size: 16px;
+    color: #884204;
+    line-height: 1.6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    text-align-last: center;
+    word-wrap: break-word;
+  }
+  
+  
+  /* --- MEDIA QUERY FOR RESPONSIVENESS --- */
+  
+  /* For Tablets and Mobile Phones */
+  @media (max-width: 768px) {
+    .avaroom-card {
+      /* Stack the image/carousel and info vertically */
+      flex-direction: column;
+      /* Adjust margin for smaller screens */
+      margin: 20px 15px;
+    }
+  
+    .avaroom-info {
+      /* Ensure info section aligns to the start when stacked */
+      align-items: stretch;
+      text-align: center;
+    }
+  
+    .avaamenities-icons {
+      /* Center the icons when stacked */
+      justify-content: center;
+    }
+  
+    /* --- CAROUSEL CHANGES FOR MOBILE --- */
+    .avaroom-carousel {
+      /* The carousel takes up the full width of the card */
+      width: 100%;
+      /* You can adjust the height for mobile if you like */
+      height: 200px;
+      /* The flex property is not needed in a column layout */
+      flex: none;
+    }
+  
+    /* --- FLOATING IMAGES CHANGES FOR MOBILE --- */
+    .floating-wrapper {
+      flex-direction: column; /* Stack description on top of images */
+      text-align: center;
+    }
+  
+    .floating-container {
+      width: 90vw; /* Make it take up most of the viewport width */
+      height: 350px; /* Adjust height for mobile */
+      margin-top: 20px;
+    }
+  
+    .float-description-box {
+      width: 100%;
+      margin: 0;
+      padding: 20px 10px; /* Adjust padding */
+    }
+  }

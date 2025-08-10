@@ -1,0 +1,65 @@
+.chatbox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-image: url("\Screenshot (1100).png");
+  height: 100vh;
+  overflow-y: auto;
+}
+/* WebKit-based browsers (Chrome, Edge, Safari) */
+.chatbox::-webkit-scrollbar {
+  width: 8px;
+  height: 100vh;
+}
+
+.chatbox::-webkit-scrollbar-track {
+  background: #323232;
+  border-radius: 10px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px; /* makes the scrollbar thumb rounded */
+}
+
+/* Firefox scrollbar */
+.chatbox {
+  scrollbar-width: thin;
+  scrollbar-color: black rgb(50, 50, 50); /* thumb, track */
+}
+.chat-messages {
+  height: 80vh;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.user-msg {
+  text-align: right;
+  background: #2e3030;
+  padding: 5px;
+  border-radius: 5px;
+  color: #f1f8e9;
+  margin: 2px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.bot-msg {
+  text-align: left;
+  background: #282a3a;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 2px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}
+
+.input-msg {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  margin: 30px;
+  gap: 15px;
+}

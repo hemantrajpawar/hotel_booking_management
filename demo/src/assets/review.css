@@ -1,0 +1,93 @@
+.review-container {
+    
+    width: 100%;
+    position: relative;
+    top:500px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+   
+}
+
+  .review-title {
+    font-size: 25px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    font-weight:200;
+    color: rgb(130, 101, 5);
+  }
+  
+  .stars-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .star-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s ease;
+    
+  }
+  
+  .star-empty {
+    color: #ccc;
+  }
+  
+  .star-filled {
+    color: #facc15;
+   
+  }
+  
+  .feedback-input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #dbab5252;
+    box-shadow: 0 0 5px rgba(118, 64, 2, 0.3);
+    border-radius: 8px;
+    font-size: 14px;
+    background:none;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    resize: none;
+  }
+  
+  .feedback-input:focus {
+    outline: none;
+    border-color: #a15c011d;
+    box-shadow: 0 0 5px rgba(118, 64, 2, 0.3);
+  }
+  
+  .submit-button {
+    margin-top: 15px;
+    width: 10%;
+    padding: 10px;
+    background-color: #7a480389;
+    box-shadow: #96590490 2px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .submit-button:hover {
+    background-color: #6f4305;
+  }
+  
+  .success-message {
+    margin-top: 10px;
+    padding: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #745105;
+    border-radius: 8px;
+    opacity: 1;
+    animation: vanish 5s forwards;
+  }
+  @keyframes vanish {
+    0% ,60%{ opacity: 1; }
+    100% { opacity: 0; }
+}

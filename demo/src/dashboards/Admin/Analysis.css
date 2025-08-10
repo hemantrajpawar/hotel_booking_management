@@ -1,0 +1,39 @@
+.admin-analytics {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .dashboard-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .occupancy-box {
+    background-color: #fef9c3;
+    padding: 15px;
+    border-left: 6px solid #facc15;
+    margin-bottom: 30px;
+    border-radius: 8px;
+  }
+  
+  .chart-container {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  
+  .admin-calendar {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  

@@ -1,0 +1,334 @@
+/* General Layout */
+.room-detail-wrapper {
+  padding: 2rem;
+  min-height: 100vh;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.room-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-left: 20px;
+  margin-bottom: 3rem;
+}
+
+/* LEFT SECTION */
+.room-left {
+  flex: 2;
+  min-width: 320px;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+
+.room-images-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+ justify-content: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.carousel-image {
+  width: 250px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+}
+
+/* Room title and description */
+.room-left h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.room-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Room details */
+.room-info-list p {
+  margin: 0.4rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Stars */
+.rating-stars {
+  margin-top: 1rem;
+  color: #ffc107;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating-stars span {
+  margin-left: 0.5rem;
+  color: #555;
+}
+
+/* Amenities section */
+.amenities {
+  margin-top: 1.5rem;
+}
+
+.amenities h4 {
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.amenities-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.amenity-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #444;
+  width: 60px;
+  text-align: center;
+}
+
+.amenity-label {
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  color: #666;
+}
+
+/* RIGHT SECTION */
+.room-right {
+  flex: 1;
+  min-width: 280px;
+  
+}
+
+.room-info-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  /* position: sticky; */
+  top: 100px;
+}
+
+.room-info-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.book-now-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.book-now-button:hover {
+  background-color: #4338ca;
+}
+
+/* REVIEWS */
+.reviews-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-bottom: 3rem;
+}
+
+.reviews-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+  text-align: center;
+}
+
+.review-box {
+  background: #fff;
+  padding: 1rem;
+  margin: 0.75rem auto;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.review-box strong {
+  color: #333;
+}
+
+.review-box p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* REVIEW FORM */
+.review-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.review-form h4 {
+  margin-bottom: 1rem;
+  color: #222;
+  font-size: 1.25rem;
+}
+
+.star-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+  resize: vertical;
+  outline: none;
+}
+
+.submit-review-btn {
+  margin-top: 1rem;
+  background-color: #a38916;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+
+
+.submit-review-btn:hover {
+  background-color: #c8bd86;
+}
+
+
+.specif-price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "Poppins", sans-serif; /* Optional: replace with your chosen font */
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+
+
+.specif-price-breakdown p,
+.specif-price-breakdown strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.specif-price-breakdown span:first-child {
+  flex: 1;
+}
+
+.specif-price-breakdown span:last-child {
+  min-width: 80px;
+  text-align: right;
+}
+
+.specif-price-breakdown hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 8px 0;
+}
+
+
+
+.reviews-section {
+  padding: 1rem;
+}
+
+.review-box {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+  min-width: 300px;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-heading{
+  font-family: "Forum", serif;
+  background-color: #b7a06fb1;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.review-quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.review-details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.review-photo .profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-user-name {
+  flex: 1;
+  font-weight: 400;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1rem;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}

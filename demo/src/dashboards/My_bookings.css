@@ -1,0 +1,19 @@
+.my-bookings-page {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .booking-card {
+    background-color: #f9fafb;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .booking-card.cancelled {
+    border-left: 5px solid red;
+    background-color: #fff5f5;
+  }
+  

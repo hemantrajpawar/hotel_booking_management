@@ -1,0 +1,158 @@
+/* --- RESPONSIVE ALL ROOMS STYLES --- */
+
+.real-all-rooms-container {
+  padding: 20px;
+  font-family: sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.real-room-type-section {
+  margin-bottom: 40px;
+}
+
+.real-room-type-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* --- ✅ KEY FIX: Corrected Grid Layout --- */
+.real-rooms-grid {
+  display: grid;
+  /* This creates a responsive grid. It will fit as many cards as possible that have a minimum width of 650px. */
+  grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+/* --- ✅ KEY FIX: The Landscape Card --- */
+.real-room-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  /* Use max-width for flexibility within the grid, and width 100% to fill the grid column */
+  max-width: 750px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  /* This is the default, but we explicitly set it for clarity */
+  flex-direction: row;
+}
+
+.real-room-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Left side of the card (Image Carousel) --- */
+.real-carousel {
+  /* This tells the carousel to take up 45% of the card's width and not to grow or shrink. */
+  flex: 0 0 45%;
+  min-height: 250px; /* Ensures a minimum height */
+  background-color: #f0f0f0; /* a light background for when images are loading */
+}
+
+.real-carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image cover the container without distortion */
+  display: block;
+}
+
+
+/* --- Right side of the card (Content) --- */
+.real-room-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* This tells the info part to take up the remaining space */
+  flex: 1 1 55%;
+}
+
+.real-room-info h3 {
+    margin-top: 0;
+}
+
+.real-rating-stars {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.real-rating-stars span {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.real-book-now-button {
+  margin-top: auto; /* This is a great trick to push the button to the bottom of the card */
+  padding: 12px;
+  width: 100%;
+  background-color: #1e5dc9;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.real-book-now-button:hover {
+  background-color: #213788;
+}
+
+.real-book-now-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.real-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 8px;
+}
+
+.real-page-btn {
+  padding: 8px 14px;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.real-page-btn:hover {
+    background: #e0e0e0;
+}
+
+.real-page-btn.real-active {
+  background: #287fdb;
+  color: white;
+  border-color: #007bff;
+}
+
+/* --- MEDIA QUERY FOR SMALLER SCREENS --- */
+/* This will stack the image and content vertically when the screen gets too narrow */
+@media (max-width: 700px) {
+  .real-rooms-grid {
+    /* On smaller screens, just show one card per row */
+    grid-template-columns: 1fr;
+  }
+  
+  .real-room-card {
+    flex-direction: column; /* Stack image and info vertically */
+  }
+
+  .real-carousel {
+    /* Let the image carousel take the full width */
+    flex-basis: 220px; 
+  }
+}

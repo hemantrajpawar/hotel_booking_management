@@ -1,0 +1,141 @@
+/* --- RESPONSIVE EVENTS PAGE STYLES --- */
+
+/* Event Header Image Section */
+.event-header-image {
+  background-image: url('/pexels-quark-studio-1159039-3201921.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  margin-top: 70px;
+  padding-top: 90px;
+  display: flex; /* Use flex to help position content */
+  align-items: center; /* Vertically center the h1 */
+}
+
+.event-header-image h1 {
+  width: auto; /* Allow width to be flexible */
+  max-width: 400px; /* Set a max width */
+  color: antiquewhite;
+  background-color: rgba(58, 27, 3, 0.812);
+  padding: 20px 40px; /* Adjust padding */
+  border-bottom-right-radius: 90px;
+  border-top-right-radius: 90px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 35px;
+}
+
+/* Container for the event cards */
+.event-card-container {
+  width: 100%; /* Use 100% width */
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 30px; /* Add space between multiple cards */
+}
+
+/* Individual Event Card */
+.event-card {
+  display: flex;
+  flex-direction: row; /* Default to side-by-side layout */
+  width: 100%;
+  max-width: 900px;
+  min-height: 370px; /* Use min-height to allow content to expand */
+  height: auto;
+  background-color: antiquewhite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Image container within the card */
+.event-card-image {
+  width: 50%; /* Take up half the width on desktop */
+  height: auto; /* Let the height be determined by the content */
+  overflow: hidden;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%; /* Make image fill its container */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease-in-out;
+}
+
+.event-card-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Text content within the card */
+.event-card-content {
+  width: 50%; /* Take up the other half of the width */
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+  justify-content: center; /* Center content vertically */
+}
+
+.event-card-content h2 {
+  display: inline-block;
+  text-align: left;
+  border-left: solid rgb(103, 57, 4) 4px;
+  padding: 8px 14px;
+  margin: 0 0 15px 0; /* Adjust margin */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(103, 57, 4);
+}
+
+.event-card-content p {
+  color: rgba(58, 27, 3, 0.812);
+  font-weight: 150;
+  line-height: 1.6; /* Improve readability */
+}
+
+/* --- MEDIA QUERY FOR RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+  .event-header-image {
+    height: 250px; /* Reduce header height on mobile */
+    background-position: center; /* Center the background image */
+    padding-top: 0;
+    justify-content: center; /* Center the h1 */
+    text-align: center;
+  }
+
+  .event-header-image h1 {
+    width: 90%; /* Make title wider */
+    max-width: none;
+    font-size: 28px; /* Reduce font size */
+    border-radius: 12px; /* Adjust border radius for a modern look */
+    padding: 15px;
+  }
+
+  .event-card {
+    flex-direction: column; /* Stack image and content vertically */
+    height: auto; /* Allow height to adjust to content */
+  }
+
+  .event-card-image,
+  .event-card-content {
+    width: 100%; /* Both sections take full width */
+  }
+
+  .event-card-image {
+    height: 220px; /* Set a fixed height for the image on mobile */
+  }
+
+  .event-card-content {
+    text-align: center; /* Center text on mobile */
+  }
+
+  .event-card-content h2 {
+    align-self: center; /* Center the heading */
+    border-left: none; /* Remove left border */
+    border-bottom: solid rgb(103, 57, 4) 3px; /* Use a bottom border instead */
+  }
+}

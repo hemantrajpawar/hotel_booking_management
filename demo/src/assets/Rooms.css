@@ -1,0 +1,331 @@
+/* --- AVAILABLE ROOMS STYLES --- */
+
+/* Main title for the section */
+.avarooms-title-main {
+  font-family: "Gloock", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  padding: 6px;
+  display: inline-block;
+  margin: 25px;
+  color: rgb(95, 90, 84);
+}
+
+/* Room Card Container */
+.avaroom-card {
+  display: flex;
+  flex-direction: row; /* Default layout is horizontal */
+  gap: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+  /* --- RESPONSIVE CHANGES --- */
+  width: auto; /* Allow width to be flexible */
+  max-width: 1000px; /* Set a max-width instead of a fixed width */
+  margin: 20px auto; /* Center the card with automatic horizontal margins */
+}
+
+/* Room Info Section */
+.avaroom-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0; /* Padding is now on the parent card */
+  align-items: flex-start;
+  flex: 1; /* Allows this section to grow */
+}
+
+.avaroom-desc {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Rating Stars */
+.avarating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.avarating-number {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Amenities Icons */
+.avaamenities-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  color: #0b245f;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.avaamenities-icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.avaamenities-icons .icon:hover {
+  transform: scale(1.2);
+}
+
+/* Pagination Controls */
+.avapagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.avapagination button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #0b245f;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.avapagination button:hover:not(:disabled) {
+  background-color: #093298;
+}
+
+.avapagination button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* --- MEDIA QUERY FOR RESPONSIVENESS --- */
+
+/* For Tablets and Mobile Phones */
+@media (max-width: 768px) {
+  .avaroom-card {
+    /* Stack the image and info vertically */
+    flex-direction: column;
+    /* Adjust margin for smaller screens */
+    margin: 20px 15px;
+  }
+
+  .avaroom-info {
+    /* Ensure info section aligns to the start when stacked */
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .avaamenities-icons {
+    /* Center the icons when stacked */
+    justify-content: center;
+  }
+}
+
+/* --- AVAILABLE ROOMS STYLES --- */
+
+/* Main title for the section */
+.avarooms-title-main {
+  font-family: "Gloock", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  padding: 6px;
+  display: inline-block;
+  margin: 25px;
+  color: rgb(95, 90, 84);
+}
+
+/* Room Card Container */
+.avaroom-card {
+  display: flex;
+  flex-direction: row; /* Default layout is horizontal */
+  gap: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+  /* --- RESPONSIVE CHANGES --- */
+  width: auto; /* Allow width to be flexible */
+  max-width: 1000px; /* Set a max-width instead of a fixed width */
+  margin: 20px auto; /* Center the card with automatic horizontal margins */
+}
+
+/* Room Info Section */
+.avaroom-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0; /* Padding is now on the parent card */
+  align-items: flex-start;
+  flex: 1; /* Allows this section to grow */
+}
+
+.avaroom-desc {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Rating Stars */
+.avarating-stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.avarating-number {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Amenities Icons */
+.avaamenities-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  color: #0b245f;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.avaamenities-icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.avaamenities-icons .icon:hover {
+  transform: scale(1.2);
+}
+
+/* Pagination Controls */
+.avapagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.avapagination button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #0b245f;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.avapagination button:hover:not(:disabled) {
+  background-color: #093298;
+}
+
+.avapagination button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+
+/* --- NEW CAROUSEL STYLES --- */
+
+.avaroom-carousel {
+  /* On desktop, the carousel takes up 45% of the card's width */
+  flex: 0 0 45%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.avaroom-carousel-inner {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.avaroom-carousel-image-wrapper {
+  width: 100%;
+  height: 250px; /* or whatever height you want */
+  overflow: hidden;
+  border-radius: 12px; /* optional */
+  position: relative;
+}
+
+.avaroom-carousel-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avaroom-carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.avaroom-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #aaa;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.avaroom-carousel-dot.active {
+  background-color: #fff;
+  opacity: 1;
+}
+
+
+/* --- MEDIA QUERY FOR RESPONSIVENESS --- */
+
+/* For Tablets and Mobile Phones */
+@media (max-width: 768px) {
+  .avaroom-card {
+    /* Stack the image/carousel and info vertically */
+    flex-direction: column;
+    /* Adjust margin for smaller screens */
+    margin: 20px 15px;
+  }
+
+  .avaroom-info {
+    /* Ensure info section aligns to the start when stacked */
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .avaamenities-icons {
+    /* Center the icons when stacked */
+    justify-content: center;
+  }
+
+  /* --- CAROUSEL CHANGES FOR MOBILE --- */
+  .avaroom-carousel {
+    /* The carousel takes up the full width of the card */
+    width: 100%;
+    /* You can adjust the height for mobile if you like */
+    height: 200px;
+    /* The flex property is not needed in a column layout */
+    flex: none;
+  }
+}
+

@@ -1,0 +1,111 @@
+/* Base Navbar Styles */
+.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* This allows the whole navbar to wrap if the logo and nav links clash on very small screens */
+  flex-wrap: wrap;
+  gap: 20px; /* Adds space between logo and nav links when they wrap */
+}
+
+/* Logo styling */
+.navbar img {
+  height: 50px;
+  object-fit: contain;
+  /* Prevents the logo from shrinking */
+  flex-shrink: 0;
+}
+
+/* Navigation section - THIS IS THE KEY CHANGE */
+.navbar nav {
+  display: flex;
+  align-items: center;
+  /* This is the magic property that makes the links wrap */
+  flex-wrap: wrap;
+  gap: 24px; /* This controls the spacing between your navigation links */
+  /* This helps center the links if they wrap on a new line */
+  justify-content: center;
+  /* Allows the nav container to grow and fill available space */
+  flex-grow: 1;
+}
+
+/* Navigation links */
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+.navbar nav a:hover {
+  color: #ccc;
+}
+
+/* NOTE: The hamburger and dropdown styles are no longer needed with this wrapping approach */
+.hamburger,
+.dropdown {
+  display: none;
+}
+
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #333;
+    transition: 0.3s;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .dropdown a:hover {
+    background-color: #f0f0f0;
+  }

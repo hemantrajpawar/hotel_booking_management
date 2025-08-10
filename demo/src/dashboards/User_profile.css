@@ -1,0 +1,48 @@
+.user-profile {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ddd;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .user-profile.img{
+    width: "150px";
+    height : "150px";
+    border-radius: "50%";
+    object-fit: "cover";
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button.logout-btn {
+    background-color: #dc3545;
+  }
+  
+  .message {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #28a745;
+  }
+  

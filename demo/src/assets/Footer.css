@@ -1,0 +1,158 @@
+/* --- RESPONSIVE FOOTER STYLES --- */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    position: relative;
+    width: 100%;
+    min-height: 60vh; /* Use min-height to be flexible */
+    height: auto; /* Allow height to adjust to content */
+    overflow: hidden;
+    color: antiquewhite;
+    padding: 40px 20px; /* Add some padding for all screen sizes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Blurred background image */
+  .footer-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/pexels-pixabay-258154.jpg") center/cover no-repeat;
+    filter: blur(14px);
+    z-index: -2; /* Ensure it's behind the overlay */
+  }
+  
+  /* Dark overlay */
+  .footer-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 13, 2, 0.4); /* Slightly adjusted opacity */
+    z-index: -1; /* Ensure it's on top of the image but behind content */
+  }
+  
+  /* Main content wrapper inside the footer */
+  .footer-content {
+    color: rgb(247, 219, 196);
+    display: flex;
+    justify-content: space-around; /* Space out items evenly */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    gap: 40px; /* Add space between wrapped items */
+    width: 100%;
+    max-width: 1200px; /* Constrain max width for large screens */
+    z-index: 1; /* Ensure content is above the overlay */
+  }
+  
+  .footer-logo {
+    height: 100px;
+    width: 150px;
+    object-fit: contain; /* Ensure logo scales nicely */
+  }
+  
+  .footer-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 22px; /* A more standard larger size */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(247, 219, 196, 0.3);
+  }
+  
+  /* Links section */
+  .links {
+    text-align: left;
+    padding-left: 0; /* Remove fixed padding */
+  }
+  
+  .links ul {
+    list-style: none;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: rgb(209, 173, 119);
+    display: block; /* Changed to block for better spacing */
+    padding: 5px 0; /* Adjusted padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .links a:hover {
+    color: #fff;
+  }
+  
+  /* Social Media Section */
+  .social-media {
+    margin-top: 40px; /* Remove fixed margin */
+    text-align: center; /* Center the content */
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-media .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* Add space between icons */
+  }
+  
+  .social-media img {
+    height: 27px;
+    width: 27px;
+    margin: 0; /* Remove fixed margin */
+    transition: transform 0.3s ease;
+    gap: 15px;
+  }
+  
+  .social-media img:hover {
+      transform: scale(1.2);
+  }
+  
+  
+  /* Developer Atlas Section */
+  .devatlas {
+    text-align: center; /* Center the content */
+  }
+  
+  .devatlas p {
+    padding: 5px;
+  }
+  
+  .devatlas img {
+    height: 60px;
+  }
+  
+  /* --- MEDIA QUERY FOR RESPONSIVENESS --- */
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center; /* Center-align all sections */
+      text-align: center;
+    }
+  
+    .links {
+      text-align: center; /* Center the links text */
+    }
+  
+    .links a {
+      padding-left: 0;
+    }
+  }
+  
